@@ -4,7 +4,7 @@ A **face recognition-based attendance and access control system** built as a fin
 Veriguard provides secure, automated attendance marking with anti-spoofing measures and a web-based management dashboard.
 
 ---
-Demo: 'https://veriguard101.netlilfy.app'
+Demo: 'https://veriguard101.netlify.app/'
 ---
 
 # Facial Recognition with JavaScript using face-api.js

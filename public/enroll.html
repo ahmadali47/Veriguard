@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="metadata/icon.jpg" type="image/x-icon">
+    <title>Veriguard-Enroll</title>
+    <link rel="stylesheet" href="enrollStyles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <nav>
+            <a href="index.html"><h3>Veriguard</h3></a>
+
+            <div class="right">
+                <div class="links">
+                    <a href="index.html" title="Dashboard" >Dashboard</a>
+                    <a href="records.html" title="Records" >Records</a>
+                </div>
+                <a class="logout-button" href="" title="Sign Out"><img src="metadata/logout icon.png" alt="Sign Out"></a>
+            </div>
+
+            
+        </nav>
+
+        <div class="main">
+
+            <div class="center">
+
+                <h4>Enroll New Face</h4>
+                <video id="video" autoplay></video>
+
+                <div style="display: flex; flex-direction: row;  justify-content: center; align-items: center;">
+                    
+                    <div class="imgcanvas"></canvas>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                     
+                        <input type="text" id="name" placeholder="Enter Name" required>
+        
+                        <input type="text" id="regNumber" placeholder="Enter Registration Number" required>
+    
+                    </div>
+                </div>
+
+
+                <p id="status">Ready to Capture.</p>
+                <!-- <button onclick="captureFace()">Capture Face</button> -->
+                <div class="enroll-btns">
+                    <!-- <button id="taker" onclick="coverPhoto()">📽📷</button> -->
+                    <button id="taker" onclick="coverPhoto()">📷</button>
+                    <button onclick="helper()">Capture Face</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="face-api.min.js"></script>
+    <script src="enrollScript.js"></script>
+    <script src="auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primaryclr: rgb(27, 58, 158);
+
+    --secondaryclr: rgb(204, 235, 255);
+
+    --secondaryclrtransparent: rgba(204, 235, 255, 0.771);
+    --grey: #333;
+
+    --pfont: "Boldonse", system-ui;
+    --sfont: "Roboto", sans-serif;
+    --shadowlight: 0 0 15px rgba(0, 0, 0, 0.25);
+    --shadowdark: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+video {
+    box-shadow: var(--shadowdark);
+    /* Blurry shadow around the div */
+
+    border-radius: .5rem;
+    /* border-radius: 1000%; */
+    /* transform: scaleX(-1); */
+}
+
+.video-container {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    margin: 0 auto;
+    /* padding: 0; */
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(./metadata/background1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* or use 'contain' based on your needs */
+}
+
+nav {
+    display: flex;
+
+    margin: 0;
+    padding: .7rem 1.5rem;
+    /* background-color: #ffba39; */
+    background-color: var(--primaryclr);
+
+    justify-content: space-between;
+
+    box-shadow: var(--shadowdark);
+}
+
+nav a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.right {
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    margin: 5px 10rem 0px 0px;
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+.links a {
+    /* background-color: orange; */
+
+    margin: 0rem 2rem 0rem 0rem;
+    padding: .3rem .6rem;
+
+    border-radius: .5rem;
+
+    font-size: large;
+    font-weight: bold;
+
+    color: var(--secondaryclr);
+
+    font-family: var(--sfont);
+    text-decoration: none;
+}
+
+.links a:hover {
+    background-color: var(--secondaryclr);
+    color: var(--primaryclr);
+    /* border-radius: .5rem; */
+}
+
+.right a img {
+    float: right;
+    height: 2rem;
+    width: 2rem;
+    /* background-color: pink; */
+}
+
+nav h3 {
+    color: var(--secondaryclr);
+    /* margin-left: 1rem; */
+
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 85vh; */
+}
+
+
+
+
+.center {
+    /* max-width: 650px; */
+    margin: 0 auto;
+    padding: .5rem 1.5rem;
+    /* margin-top: 2rem; */
+    margin-top: 3.5rem;
+    border-radius: .5rem;
+
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondaryclrtransparent);
+    box-shadow: var(--shadowdark);
+
+    /* justify-content: center; */
+    align-items: center;
+    /* align-content: center; */
+    height: 75vh;
+    max-height: 75vh;
+}
+
+.center h4 {
+
+    margin: 0;
+    padding: 0;
+
+    /* background-color: orange; */
+
+    font-family: var(--pfont);
+    color: var(--primaryclr);
+    margin: 0.5rem 0rem 0rem 0rem;
+    ;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+
+    /* background-color: orange; */
+
+    font-family: var(--pfont);
+    color: var(--primaryclr);
+    margin: 0.5rem 0rem 0rem 0rem;
+    ;
+}
+
+.controls {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+
+    /* background-color: pink; */
+    text-align: center;
+    margin: 0rem 0rem .5rem 0rem;
+}
+
+#toggleBtn {
+    /* margin: 0; */
+    /* padding: 0; */
+    float: left;
+    /* background-color: orange; */
+}
+
+.center button {
+    /* margin: 1rem 0rem .5rem 0rem; */
+    padding: .3rem .5rem;
+
+    border-radius: 0.5rem;
+    border: 2px solid var(--primaryclr);
+    /* border: none; */
+    font-family: var(--pfont);
+    background-color: var(--primaryclr);
+    color: var(--secondaryclr);
+    font-weight: bold;
+    font-style: normal;
+
+    box-shadow: var(--shadowdark);
+    /* Blurry shadow around the div */
+    font-family: var(--sfont);
+    font-size: medium;
+}
+
+.center button:hover {
+    background-color: var(--secondaryclr);
+    color: var(--primaryclr);
+    cursor: pointer;
+    border: 2px solid var(--primaryclr);
+}
+
+
+
+#results {
+    margin: .5rem 0rem 0rem 0rem;
+    padding: 1rem 1rem;
+
+    width: 95%;
+
+    border-radius: .5rem;
+
+    background-color: #f0f0f0;
+    /* min-height: 60px; */
+}
+
+.center p {
+    /* margin: 1rem 0rem 0rem 0rem; */
+    color: var(--primaryclr);
+    font-family: var(--sfont);
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.leftside {
+    margin: 1rem 1rem 1rem 1rem;
+    padding: .5rem .5rem;
+    /* border: 2px solid var(--primaryclr) ; */
+    border-radius: .5rem;
+    background-color: var(--secondaryclrtransparent);
+    box-shadow: var(--shadowdark);
+
+
+    width: 100%;
+    height: 86vh;
+}
+.leftside h4 {
+    text-align: center;
+}
+
+
+.logs-container {
+    /* max-height: 500px; */
+    padding: .4rem .4rem;
+    margin: .4rem .4rem;
+    /* padding: .8rem .8rem; */
+    max-height: 77vh;
+    border-radius: .5rem;
+
+    overflow-y: auto;
+}
+
+.log-item {
+    background: white;
+    padding: .8rem .8rem .8rem .8rem;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+}
+
+.log-item .log-header {
+    /* display: flex; */
+    flex-direction: column;
+
+    /* background-color: pink; */
+
+    justify-content: space-between;
+    /* margin-bottom: 8px; */
+    font-weight: bold;
+    margin: 0rem 0rem 0rem .8rem ;
+    width: 100%;
+    /* background-color: orange; */
+    /* justify-content: right; */
+}
+
+.log-item .log-type {
+    /* position: fixed; */
+    top: 0px;
+    /* right: 20px; */
+    left: 45%;
+    /* color: white; */
+    color: black;
+    max-width: fit-content;
+    /* font-weight: bold; */
+    padding: .25rem .3rem;
+    border-radius: .3rem;
+    font-size: 12px;
+
+    /* background-color: pink; */
+    /* border: 2px solid red; */
+    /* justify-content: right; */
+    /* text-align: left; */
+
+    float: right;
+}
+
+.log-identity {
+    margin: 2rem 0rem 0rem 0rem ;
+    /* border: 2px solid rebeccapurple; */
+    /* background-color: pink; */
+}
+
+.log-type.unknown {
+    background: #ff9800;
+    /* float: right; */
+}
+
+.log-type.spoofing {
+    background: #f44336;
+    /* float: right; */
+}
+
+.log-item .log-image {
+    width: 100%;
+    max-width: 120px;
+    border-radius: .4rem;
+    /* margin-top: 8px; */
+    cursor: pointer;
+}
+
+.log-item .log-time {
+
+    font-size: .9rem;
+    color: #666;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rightside {
+    
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0;
+    /* border: 2px solid var(--primaryclr) ; */
+    border-radius: .5rem;
+
+    /* background-color: var(--secondaryclrtransparent);
+    box-shadow: var(--shadowdark); */
+    
+    width: 100%;
+    height: 88vh;
+}
+
+.rightside h4 {
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+
+.attendtoday {
+    /* border: 2px solid var(--primaryclr); */
+
+    background-color: var(--secondaryclrtransparent);
+    box-shadow: var(--shadowdark);
+    border-radius: .5rem;
+}
+
+
+
+/* Attendance Styles */
+.attendance-stats {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* margin-bottom: 15px; */
+
+    /* height: 22.5vh; */
+    height: 100%;
+    max-height: 22.5vh;
+}
+
+.stat-card {
+    /* background: #f5f5f5; */
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+.attendance-list {
+    margin: 1rem 0rem 0rem 0rem;
+    padding: .5rem .7rem;
+    background-color: var(--secondaryclrtransparent);
+    box-shadow: var(--shadowdark);
+    border-radius: .5rem;
+
+    height: 55.5vh;
+    /* height: 100%; */
+    max-height: 55.5vh;
+
+    overflow-y: auto;
+
+    font-family: var(--sfont);
+
+    /* border: 1px solid var(--primaryclr); */
+}
+
+.attendance-item {
+    display: flex;
+    justify-content: space-between;
+    padding: .6rem .8rem;
+    margin: .5rem 0;
+    background: rgba(83, 83, 83, 0.118);
+    /* border: 1px solid var(--primaryclr); */
+    /* box-shadow: var(--shadowlight); */
+    border-radius: .5rem;
+}
+
+.attendance-item.present #stat{
+    /* border-left: 3px solid #2ecc71; */
+    font-size: .9rem;
+    color: #0fc04d;
+    font-weight: bold;
+}
+
+.attendance-item.absent #stat {
+    /* border-left: 3px solid #e74c3c; */
+    font-size: .9rem;
+    color: #d92f1c;
+    font-weight: bold;
+}
+
+.attendance-item .regno {
+    font-weight: bold;
+    width: 30%;
+}
+
+.attendance-item .name {
+    width: 50%;
+}
+
+.attendance-item .status {
+    width: 20%;
+    text-align: right;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.circular-chart {
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+  }
+  
+  .circle-bg {
+    fill: none;
+    stroke: #e2e2e2;
+    stroke-width: 2.8;
+  }
+  
+  .circle {
+    fill: none;
+    /* stroke: #00acc1; */
+    /* stroke: var(--primaryclr); */
+    /* stroke: rgba(9, 166, 7, 0.963); */
+    stroke: #0fc04d;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.6s ease;
+}
+
+.percentage {
+    /* fill: var(--primaryclr); */
+    font-size: 0.5em;
+    text-anchor: middle;
+    /* dominant-baseline: central; */
+    dominant-baseline: middle;
+    transform: rotate(90deg);
+    /* color: black; */
+    transform-origin: center;
+    /* z-index: 1000; */
+    font-size: .7rem;
+    /* color: var(--primaryclr); */
+    fill: #0fc04d;
+    /* margin: 5rem; */
+  }

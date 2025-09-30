@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="metadata/icon.jpg" type="image/x-icon">
+  <title>Veriguard-Records</title>
+  <link rel="stylesheet" href="recordsStyles.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <nav>
+      <a href="index.html"><h3>Veriguard</h3></a>
+
+      <div class="right">
+        <div class="links">
+          <a href="index.html" title="Dashboard">Dashboard</a>
+          <a href="enroll.html" title="Enroll">Enroll</a>
+        </div>
+        <a class="logout-button" href="" title="Sign Out"><img src="metadata/logout icon.png" alt="Sign Out"></a>
+      </div>
+
+    </nav>
+
+    <div class="main">
+
+      <div class="menu">
+
+        <ul>
+          <li><button id="users-btn" onclick="menubar_user()"><span>👤</span> Users</button></li>
+          <hr>
+          <li><button id="attendance-btn" onclick="menubar_attendance()"><span>📋</span> Attendance</button></li>
+          <hr>
+          <li><button id="unknown-btn" onclick="menubar_unknown()"><span>🕵️‍♂️</span> Unknown</button></li>
+          <hr>
+          <li><button id="spoofing-btn" onclick="menubar_spoofing()"><span>🎭</span> Spoofing</button></li>
+        </ul>
+
+      </div>
+
+      <div class="content">
+
+        <!-- User -->
+        <div id="users-content" class="user-content">
+          <h4>Enrolled Users</h4>
+
+          <div class="search-container">
+            <div class="search-box">
+              <select id="searchType">
+                <option value="name">By Name</option>
+                <option value="regno">By Reg No</option>
+              </select>
+              <input type="text" id="searchInput" placeholder="Search...">
+              <button id="searchBtn">Search</button>
+              <button id="clearBtn">Clear</button>
+            </div>
+          </div>
+
+          <div class="records-container" id="recordsContainer">
+            <div class="no-records">Loading records...</div>
+          </div>
+        </div>
+
+        <!-- Attendance -->
+        <div id="attendance-content" class="attendance-content">
+          <h4>Attendance Records</h4>
+
+          <div class="date-selector">
+            <label for="date-picker">Select Date:</label>
+            <input type="date" id="date-picker">
+            <button id="fetch-btn">Get Attendance</button>
+          </div>
+
+          <div class="stats" id="stats-container">
+            <!-- Stats will be populated here -->
+          </div>
+
+          <div class="table-container">
+            <table class="attendance-table">
+              <thead>
+                <tr>
+                  <th>Registration No</th>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>Last Recognized</th>
+                </tr>
+              </thead>
+              <tbody id="attendance-body">
+                <!-- Attendance data will be populated here -->
+              </tbody>
+            </table>
+            <div id="no-data" class="no-data">
+              Select a date to view attendance records
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Unknown -->
+        <div id="unknown-content" class="unknown-content">
+          <h4>Unknown Persons Records</h4>
+
+
+
+          <div class="time-filter">
+            <button class="filter-btn active" data-filter="today">Today</button>
+            <button class="filter-btn" data-filter="weekly">Weekly</button>
+            <button class="filter-btn" data-filter="monthly">Monthly</button>
+          </div>
+
+          <div class="log-count" id="log-count">Loading...</div>
+
+          <div class="logs-container" id="logs-container">
+            <!-- Logs will be populated here -->
+          </div>
+
+
+
+        </div>
+
+
+        
+
+        <!-- Spoofing -->
+        <div id="spoofing-content" class="spoofing-content">
+          <h4>Spoofing Records</h4>
+
+
+
+          <div class="time-filter2">
+            <button class="filter-btn2 active2" data-filter2="today2">Today</button>
+            <button class="filter-btn2" data-filter2="weekly2">Weekly</button>
+            <button class="filter-btn2" data-filter2="monthly2">Monthly</button>
+          </div>
+
+          <div class="log-count2" id="log-count2">Loading...</div>
+
+          <div class="logs-container2" id="logs-container2">
+            <!-- Logs will be populated here -->
+          </div>
+
+        </div>
+
+        
+
+
+        
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="recordsScript.js"></script>
+  <script src="auth.js"></script>
+</body>
+
+</html>

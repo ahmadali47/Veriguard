@@ -1,3 +1,12 @@
+# Veriguard
+
+A **face recognition-based attendance and access control system** built as a final year project.  
+Veriguard provides secure, automated attendance marking with anti-spoofing measures and a web-based management dashboard.
+
+---
+Demo: 'https://veriguard101.netlilfy.app'
+---
+
 # Facial Recognition with JavaScript using face-api.js
 ### To start up the app:
 1. run npm install in the root directory
@@ -14,13 +23,6 @@
         faceapi.nets.ageGenderNet.loadFromUri('./models'),
     ])
 ```
-
-# Veriguard
-
-A **face recognition-based attendance and access control system** built as a final year project.  
-Veriguard provides secure, automated attendance marking with anti-spoofing measures and a web-based management dashboard.
-
----
 
 ## 🚀 Features
 - Real-time face recognition in the browser using **face-api.js** (TensorFlow.js).
